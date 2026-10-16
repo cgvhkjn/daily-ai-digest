@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日 AI 日报 · Daily AI Digest</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", Georgia, serif; margin: 0; background: #faf7f2; color: #1c1a17; }
+  @media (prefers-color-scheme: dark) { body { background: #171512; color: #ece7dd; } }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 60px; }
+  header { border-bottom: 3px double currentColor; padding-bottom: 12px; margin-bottom: 18px; }
+  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: 1px; }
+  .sub { opacity: .7; font-size: 14px; }
+  .switcher { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 20px; }
+  .switcher button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; cursor: pointer; }
+  .switcher button.active { background: #b3392e; border-color: #b3392e; color: #fff; }
+  .issue-date { font-size: 22px; margin: 6px 0 2px; }
+  .kind { font-size: 12px; border: 1px solid currentColor; border-radius: 4px; padding: 1px 6px; vertical-align: middle; opacity: .75; }
+  .highlight { border-left: 4px solid #b3392e; padding: 8px 12px; margin: 14px 0 22px; background: rgba(179,57,46,.08); font-size: 16px; }
+  h2 { font-size: 19px; border-bottom: 1px solid currentColor; padding-bottom: 6px; margin: 26px 0 12px; }
+  .news-item { margin-bottom: 16px; }
+  .news-item h3 { font-size: 16px; margin: 0 0 4px; }
+  .news-item p { margin: 0 0 4px; line-height: 1.65; font-size: 15px; }
+  .src { font-size: 13px; opacity: .65; }
+  .repo { margin-bottom: 14px; font-size: 15px; line-height: 1.6; }
+  .repo a { color: #b3392e; text-decoration: none; font-weight: 600; }
+  .meta { font-size: 13px; opacity: .7; }
+  .note { font-size: 13px; opacity: .7; border-top: 1px dashed currentColor; padding-top: 8px; margin-top: 6px; }
+  .rumour { background: rgba(230,170,40,.12); border: 1px solid rgba(230,170,40,.5); border-radius: 8px; padding: 10px 14px; line-height: 1.65; font-size: 15px; }
+  footer { margin-top: 40px; font-size: 13px; opacity: .6; border-top: 1px solid currentColor; padding-top: 10px; }
+  .issue { display: none; }
+  .issue.active { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>每日 AI 日报</h1>
+    <div class="sub">Daily AI Digest · AI 热门资讯 + GitHub 热门项目 · 每天 10:00 更新 · 5 分钟读完</div>
+  </header>
+
+  <div class="switcher">
+    <button data-target="issue-2026-10-16" class="active">2026-10-16 正式版</button>
+    <button data-target="issue-2026-10-15">2026-10-15 样本</button>
+  </div>
+
+  <section class="issue active" id="issue-2026-10-16">
+    <div class="issue-date">2026 年 10 月 16 日 <span class="kind">正式版</span></div>
+    <div class="highlight"><strong>今日重点：</strong>今天 GitHub 前五名被 Agent 技能与调度框架包场——大家已经不只在拼模型，在拼“怎么让 Agent 干活更省、更稳”了。</div>
+
+    <h2>AI 热门资讯</h2>
+
+    <div class="news-item"><h3>1. Meta 发布 Muse Spark Open 开源权重模型</h3>
+      <p>Meta 称它是目前最强的美国开源权重模型：总参数 816B、激活 42B、上下文 100 万 token，原生多模态，主打编程和 Agent 长任务；还专门针对 Mac Studio（M5 Ultra）做了优化，强调能在桌面端本地跑。昨天日报里刚讲完前沿模型打价格战，今天 Meta 直接把权重放出来，桌面本地 Agent 要热闹了。</p>
+      <div class="src">来源：TechCrunch 等 · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>2. Anthropic 向外部评估机构 METR 开放“员工级”访问</h3>
+      <p>据 Reuters 报道，Anthropic 让独立评估组织 METR 以接近内部员工的权限去测试它的模型。厂商把第三方评估做到这个深度不多见，这是把“安全可信”当竞争筹码打。</p>
+      <div class="src">来源：Reuters · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>3. 苹果国行 AI 有新进展：库克确认 10 月底开启测试</h3>
+      <p>这是昨天那条的后续更新：不再是“有望 12 月”，库克确认 Apple Intelligence 国行版 10 月底开启测试，接入阿里通义千问；但新版 Siri AI 仍不在首波范围内。</p>
+      <div class="src">来源：新浪 / 财联社 · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>4. OpenAI 推出 Rosalind 学术计划</h3>
+      <p>OpenAI 把它的生命科学方向模型 Rosalind 向高校和学术机构开放了专门计划。生命科学正在成为各家抢的垂直高地，对做科研的人值得留意后续细则。</p>
+      <div class="src">来源：WiseVoter · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>5. Webflow 上线与 Google Gemini 的连接器</h3>
+      <p>建站平台 Webflow 发布了与 Gemini 的官方连接，让企业在建站和运营流程里直接调用 Gemini 的能力。大模型的竞争越来越不在模型本身，而在谁先嵌进现成的工作流入口。</p>
+      <div class="src">来源：GlobeNewswire · 2026-10-15</div></div>
+
+    <h2>GitHub 热门项目</h2>
+
+    <div class="repo"><a href="https://github.com/anthropics/claude-plugins-official">anthropics/claude-plugins-official</a> <span class="meta">⭐ 39,161 · Python</span><br>Anthropic 官方维护的 Claude Code 插件目录。用 Claude Code 的话，这是官方精选入口，值得挨个翻。</div>
+    <div class="repo"><a href="https://github.com/JuliusBrussee/caveman">JuliusBrussee/caveman</a> <span class="meta">⭐ 112,596 · Go</span><br>思路很野：让编程 Agent 用“原始人说话”的极简方式交流，号称能砍掉 65% 的 token 消耗。荒诞但戳中了真痛点，所以爆了。</div>
+    <div class="repo"><a href="https://github.com/obra/superpowers">obra/superpowers</a> <span class="meta">⭐ 299,937 · Shell</span><br>一套 Agent 技能框架加软件开发方法论，把“怎么让 Agent 靠谱地写代码”做成了可复用的技能包。</div>
+    <div class="repo"><a href="https://github.com/ruvnet/ruflo">ruvnet/ruflo</a> <span class="meta">⭐ 75,155 · TypeScript</span><br>多 Agent 集群的调度框架：部署智能体群、协调自主工作流，带自适应记忆和 RAG 集成，原生支持 Claude Code、Codex 等。</div>
+    <div class="repo"><a href="https://github.com/affaan-m/ECC">affaan-m/ECC</a> <span class="meta">⭐ 280,437 · JavaScript</span><br>给 Agent 框架做性能优化的系统：技能、本能记忆、安全与研究优先的开发流程，覆盖 Claude Code、Codex、Cursor 等多个平台。</div>
+    <div class="note">Star 口径：Star 数为今早经仓库页与 GitHub API 核实的总 Star，当日新增未纳入统计；与昨天样本已去重。</div>
+  </section>
+
+  <section class="issue" id="issue-2026-10-15">
+    <div class="issue-date">2026 年 10 月 15 日 <span class="kind">验证样本</span></div>
+    <div class="highlight"><strong>今日重点：</strong>模型在拼价格、监管在查安全、企业在抢落地人才——三条线昨天同时在动。</div>
+
+    <h2>AI 热门资讯</h2>
+
+    <div class="news-item"><h3>1. Gemini 4 Argon 继续发酵：Google 拿它重构自家 Chrome</h3>
+      <p>Argon 是 10 月 14 日发布的，定价每百万 token 输入 $2、输出 $10，主打金融、法律等企业场景。昨天的新进展是 Google 公开称，Chrome 团队靠它在几周内完成了约 600 万行遗留代码的大型重构，社区测算它单任务成本约 $0.41，而同类模型要 $3.51。前沿模型的价格战是动真格的了。</p>
+      <div class="src">来源：ai0.news 当日汇总</div></div>
+
+    <div class="news-item"><h3>2. 监管出手：FTC 向 OpenAI 和 Anthropic 发传票</h3>
+      <p>美国联邦贸易委员会 10 月 15 日确认，已向两家公司发出民事调查传票，索要安全事件、防护措施、隐私政策和营销材料方面的文件，高管可能被要求作证；理由是涉嫌违反消费者保护规定。同一天还有八个州的总检察长就儿童安全问题起诉 OpenAI。注意：传票只是调查，不等于已认定违法。</p>
+      <div class="src">来源：TechRepublic · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>3. 中国大模型攻克 30 多年数学难题</h3>
+      <p>上海 AI 实验室的书生科学多模态大模型 S2 协助数学家团队完成了三维 Ghys 猜想的证明，北大团队又用 SHEAF 框架做了形式化验证，论文已发 arXiv，验证代码开源在 GitHub。这是“AI 做科研”从口号变成可验证成果的一个标志性案例。</p>
+      <div class="src">来源：澎湃新闻（新浪转载）</div></div>
+
+    <div class="news-item"><h3>4. 苹果国行 AI 有望 12 月上线，接入阿里模型</h3>
+      <p>据马克·古尔曼爆料，苹果计划 12 月随 iOS 27.3 在中国大陆推出 Apple Intelligence，国行版接入通义千问、通义万相，苹果已于 9 月 29 日拿到监管许可；首波只有 Genmoji、通知摘要、写作工具等功能，新版 Siri 不在其中。这是爆料口径，等官方确认。</p>
+      <div class="src">来源：中华网（IT之家）</div></div>
+
+    <div class="news-item"><h3>5. 企业在抢“能落地 AI 的人”：FDE 岗位暴涨</h3>
+      <p>AWS 投入 10 亿美元建前线部署工程师（FDE）团队，Anthropic 计划 2027 年底前培养 1 万名；美国 FDE 岗位从 2023 年不到 200 个涨到 2026 年前九个月的 7,300 多个，招聘薪资中位数约 19.5 万美元。市场缺的不是会聊 AI 的人，是能交付结果的人。</p>
+      <div class="src">来源：Binance Square（转 CNBC）</div></div>
+
+    <h2>传闻观察（未经证实）</h2>
+    <div class="rumour">网传 Anthropic 要发 Claude Opus 6、OpenAI 有个代号 “Bell” 的项目，经核查两家都没有任何官方确认，目前 Anthropic 最新旗舰仍是 9 月 22 日的 Opus 5.5、OpenAI 是 9 月 29 日的 GPT-6.1 Sol，这条基本是烟雾。</div>
+
+    <h2>GitHub 热门项目</h2>
+
+    <div class="repo"><a href="https://github.com/morluto/rea">morluto/rea</a> <span class="meta">当日第 1 · ⭐ 248,565（当日 +41,034）· TypeScript</span><br>让 Agent 逆向分析任何应用，从行为一路拆到原生二进制。不过有人实测后提醒：它本体是个协调器，干活靠 Ghidra 等反编译器加 AI 解读，不是“一键还原源码”。</div>
+    <div class="repo"><a href="https://github.com/debpalash/VoiceStudio">debpalash/VoiceStudio</a> <span class="meta">当日第 2 · ⭐ 66,951（当日 +3,538）· Python</span><br>完全本地运行的 ElevenLabs 替代品：声音克隆、配音、转写、有声书，号称支持 646 种语言。</div>
+    <div class="repo"><a href="https://github.com/mksglu/context-mode">mksglu/context-mode</a> <span class="meta">当日第 3 · ⭐ 29,289（当日 +947）· TypeScript</span><br>给 AI 编程 Agent 做上下文优化，把工具输出沙箱化、号称减少 98%，还带会话记忆。给 Agent 省 token 的工具正在成刚需。</div>
+    <div class="repo"><a href="https://github.com/K-Dense-AI/scientific-agent-skills">K-Dense-AI/scientific-agent-skills</a> <span class="meta">当日第 5 · ⭐ 49,565（当日 +163）· Python</span><br>把任何 Agent 变成“AI 科学家”：177 个科研技能加 100 多个科学数据库，兼容 Claude Code、Codex 等。做科研的可以重点看看。</div>
+    <div class="repo"><a href="https://github.com/ifixai-ai/iFixAi">ifixai-ai/iFixAi</a> <span class="meta">当日第 7 · ⭐ 27,687（当日 +2,109）· Python</span><br>给 AI Agent 做独立审计：它到底有没有按要求干活，120 秒内出结论。正好呼应上面 FTC 那条，Agent 信任正在变成一门生意。</div>
+    <div class="note">Star 口径：官方不存历史榜单，数据取自第三方对 10 月 15 日 Trending 的当日快照。</div>
+  </section>
+
+  <footer>每日 AI 日报 · 由个人 AI 助手按 <a href="METHOD.md">METHOD.md</a> 的规范每天整理 · 内容存档见 digests/ 目录</footer>
+</div>
+<script>
+  document.querySelectorAll('.switcher button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.switcher button').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.issue').forEach(function (s) { s.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
