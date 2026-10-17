@@ -41,11 +41,51 @@
   </header>
 
   <div class="switcher">
-    <button data-target="issue-2026-10-16" class="active">2026-10-16 正式版</button>
+    <button data-target="issue-2026-10-17" class="active">2026-10-17 正式版</button>
+    <button data-target="issue-2026-10-16">2026-10-16 正式版</button>
     <button data-target="issue-2026-10-15">2026-10-15 样本</button>
   </div>
 
-  <section class="issue active" id="issue-2026-10-16">
+  <section class="issue active" id="issue-2026-10-17">
+    <div class="issue-date">2026 年 10 月 17 日 <span class="kind">正式版</span></div>
+    <div class="highlight"><strong>今日重点：</strong>今天的主线是“定规则”：中国拟把顶级模型纳入出口管制草案，Anthropic 则把自己的监管草案推向美国国会，模型再强也要先过规则这一关。</div>
+
+    <h2>AI 热门资讯</h2>
+
+    <div class="news-item"><h3>1. 中国公布 AI 技术出口管制修订草案，开源发布设快速通道</h3>
+      <p>草案拟将 23 项关键 AI 技术纳入管制，涵盖大模型、智能代理、算力集群与数据处理；达到超高训练算力、超大参数或全球排名靠前的模型，其权重、源码与训练方法等核心技术出口将受限。同时草案为开源发布设了自动许可的快速通道，已公开的技术不受新规限制，显示管制与保住开源生态在同时推进。</p>
+      <div class="src">来源：流動日報 NewMobileLife · 2026-10-17</div></div>
+
+    <div class="news-item"><h3>2. Anthropic 向美国国会推介 AI 监管草案，主张只在严重风险时叫停模型</h3>
+      <p>据 POLITICO 报道，Anthropic 已向国会议员推介一份前沿 AI 安全与防务法案草案，主张只有在可能造成巨额经济损失或重大伤亡、且风险来自生物武器、模型失控或严重网络攻击等情形时，政府才能叫停模型发布或使用；草案同时要求实验室建立安全框架、发透明度报告并向商务部通报重大事故。这是一家头部实验室主动去塑造管自己的规则。</p>
+      <div class="src">来源：IT之家（新浪转载，源 POLITICO） · 2026-10-17</div></div>
+
+    <div class="news-item"><h3>3. Microsoft 完成 2.8 万亿参数 MAI-Base-2 预训练，称训练效率远超 DeepSeek 同类基座</h3>
+      <p>Microsoft AI 称已完成 MAI-Base-2 的预训练：总参数 2.8 万亿、每 token 激活约 800 亿，用 1.6 万块 GB200 训练 38 天，训练数据约 50 万亿 token 且从一开始就混入视觉数据，目前进入后训练阶段，计划通过 Foundry 向可信伙伴授权权重。其自估训练效率为 DeepSeek-V4-Pro-Base 的 4.2 到 12.3 倍，但这是厂商自测、尚无第三方复现，且模型尚未正式发布。</p>
+      <div class="src">来源：Microsoft AI（经 D-CSIL 汇总） · 2026-10-15</div></div>
+
+    <div class="news-item"><h3>4. NVIDIA 发布 Nemotron 3.5 开源模型家族，120B 多模态 Agent 模型领衔</h3>
+      <p>NVIDIA 推出三款开放模型：120B 的 Super VL 面向能读文本、图像、文档和视频的企业级 Agent，另有两款 Bolt 小模型分别面向本地 24GB 显存设备和边缘设备，前两款已可用、最小一款定于 10 月 23 日推出。权重、数据集与训练配方一并开放，本地就能跑多模态 Agent，对不想把文档送上云的团队是个新选项；性能数字均为厂商口径。</p>
+      <div class="src">来源：NVIDIA（经 Harava News 报道） · 2026-10-16</div></div>
+
+    <div class="news-item"><h3>5. Perplexity 开源 SPACE：支撑其 Computer Agent 的沙箱平台</h3>
+      <p>Perplexity 以 Apache 2.0 开源了 SPACE，这是自 7 月以来支撑其 Computer Agent 每次会话的隔离执行平台：每个任务跑在独立的 Firecracker 微虚拟机里，凭据和网络策略留在虚拟机外，任务可暂停、恢复和分支。Agent 能不能安全地放手干活，沙箱正在变成独立的产品层，这份已在生产环境跑过的实现值得做 Agent 的人翻一翻。</p>
+      <div class="src">来源：Perplexity（经 Unite.AI 报道） · 2026-10-15</div></div>
+
+    <h2>传闻观察（未经证实）</h2>
+    <div class="rumour">有报道称 Anthropic 投资者日后，部分投资者讨论的 IPO 估值预期约为 1.5 万亿美元，低于此前约 2 万亿美元的预期，理由是季度增速放缓；相关数字均来自知情人士说法，公司尚无正式文件或公告，不要当成已定价。</div>
+
+    <h2>GitHub 热门项目</h2>
+
+    <div class="repo"><a href="https://github.com/HKUDS/CLI-Anything">HKUDS/CLI-Anything</a> <span class="meta">当日第 4 · ⭐ 53,529（当日 +281）· Python</span><br>想把所有软件都改造成 Agent 能直接调用的命令行接口，并配了一个 CLI-Hub 汇总这类接口。做 Agent 工具链的人值得看它怎么定义“软件原生适配 Agent”。</div>
+    <div class="repo"><a href="https://github.com/cursor/plugins">cursor/plugins</a> <span class="meta">当日第 9 · ⭐ 11,981（当日 +278）· TypeScript</span><br>Cursor 官方的插件规范与官方插件仓库。想给 Cursor 做扩展、或想看编辑器插件生态怎么标准化的人，可以从这里入手。</div>
+    <div class="repo"><a href="https://github.com/MadsLorentzen/ai-job-search">MadsLorentzen/ai-job-search</a> <span class="meta">当日第 11 · ⭐ 48,567（当日 +898）· Python</span><br>一套在本机运行的 AI 求职框架，基于 Claude Code 做岗位评估、简历定制、求职信和面试准备。今天新增 Star 近 900，是榜上把 Agent 用到个人求职场景的代表。</div>
+    <div class="repo"><a href="https://github.com/hmjz100/LinkSwift">hmjz100/LinkSwift</a> <span class="meta">当日第 12 · ⭐ 23,752（当日 +538）· JavaScript</span><br>基于 JavaScript 的网盘直链获取工具，支持百度网盘、阿里云盘、夸克网盘等八家网盘。不是 AI 项目，但确实是今天中文用户圈的热门实用工具。</div>
+    <div class="repo"><a href="https://github.com/xerj-org/xerj">xerj-org/xerj</a> <span class="meta">当日第 13 · ⭐ 6,972（当日 +1,648）· Rust</span><br>给 AI 用的数据搜索工具：一键把代码、文档、日志和 PDF 建索引，供搜索、RAG 和 Agent 记忆使用，号称比 grep 省得多 token，且兼容 Elasticsearch 客户端。今天新增 Star 超 1600，是榜上增速最快的之一。</div>
+    <div class="note">Star 口径：Star 总数于 2026-10-17 运行当日经 GitHub API 核实，当日新增 Star 取自 GitHub Trending daily 页面当日快照；已与 10 月 15、16 日日报去重，重复上榜的旧项目未再收录。</div>
+  </section>
+
+  <section class="issue" id="issue-2026-10-16">
     <div class="issue-date">2026 年 10 月 16 日 <span class="kind">正式版</span></div>
     <div class="highlight"><strong>今日重点：</strong>今天 GitHub 前五名被 Agent 技能与调度框架包场——大家已经不只在拼模型，在拼“怎么让 Agent 干活更省、更稳”了。</div>
 
